@@ -99,6 +99,9 @@ class LinkedList:
         return temp
 
     def insert (self, index, value):
+        """
+        Function to add a node to an index. 
+        """
         if index < 0 or index > self.length: 
             return None
         if index == 0: 
@@ -113,9 +116,25 @@ class LinkedList:
         self.length += 1
         return True
 
-
-
-
+    def remove(self, index):
+        """"
+        Function to remove a node at a given index. 
+        """
+        if index < 0 or index > self.length: 
+            return None
+        if index == 0: 
+            self.popfirst() # This works since this functio returns a bool
+        if index == self.length:
+            self.pop() # This also works since this function returns a bool
+        
+        # pointers
+        prev = self.get(index) # pointer to before the index.
+        temp = prev.next # temp is at the index. 
+        prev.next = temp.next # previous's next is indexs next.
+        temp.next = None # setting index's next to none. 
+        self.length -= 1
+        
+        return temp
 
 
 
