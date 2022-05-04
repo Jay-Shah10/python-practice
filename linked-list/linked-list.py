@@ -97,7 +97,21 @@ class LinkedList:
         for _ in range(index):
             temp = temp.next
         return temp
+
+    def insert (self, index, value):
+        if index < 0 or index > self.length: 
+            return None
+        if index == 0: 
+            self.prepend(value)
+        if index == self.length: 
+            self.append(value)
         
+        new_node = Node(value)
+        temp = self.get(index - 1) # temp is pointing to the node before the index value. 
+        new_node.next = temp.next # replace new node's next with the previous node's next. 
+        temp.next = new_node # previous node's next value is now pointed to the new node.  
+        self.length += 1
+        return True
 
 
 
