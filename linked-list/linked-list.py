@@ -106,8 +106,10 @@ class LinkedList:
             return None
         if index == 0: 
             self.prepend(value)
+            return True
         if index == self.length: 
             self.append(value)
+            return True
         
         new_node = Node(value)
         temp = self.get(index - 1) # temp is pointing to the node before the index value. 
@@ -128,7 +130,7 @@ class LinkedList:
             self.pop() # This also works since this function returns a bool
         
         # pointers
-        prev = self.get(index) # pointer to before the index.
+        prev = self.get(index - 1) # pointer to before the index.
         temp = prev.next # temp is at the index. 
         prev.next = temp.next # previous's next is indexs next.
         temp.next = None # setting index's next to none. 
@@ -155,11 +157,20 @@ def main():
     n = LinkedList("mon")
     n.append("tue")
     n.append("wed")
-
     n.printList()
+    print()
 
     n.pop()
     n.printList()
+    print()
+
+    n.insert(2, "hi")
+    n.printList()
+    print()
+
+    n.remove(2)
+    n.printList()
+    print()
     
 
     
