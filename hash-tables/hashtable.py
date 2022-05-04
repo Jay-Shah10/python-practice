@@ -19,7 +19,7 @@ class HashTable:
         if self.data_map[index] is not None: 
             for i in range(len(self.data_map[index])): # this is for the list within the list at that index. 
                 if self.data_map[index][i][0] == key: # for this i is list at the index. 0 is the key at the i's values. 
-                    return self.data_map[index][i][1]
+                    return self.data_map[index][i][1] # this 1 is the value that is at the key, which is what we want to return. 
         return None
 
     
