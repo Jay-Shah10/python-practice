@@ -36,3 +36,37 @@ def set_item(self, key, value):
     self.data_map[index].append([key, value])
 
 ```
+
+## Big O
+* The hash method itself is going to be O(1)
+* setting is also O(1)
+* get function is O(n)
+
+
+
+## Common interview question: 
+you have two lists and you want to find if they have something in commnon. 
+* Two approaches. 
+1. you have nested for-loops. you can check if each value is in each.  O(n^2)
+
+```python
+def item_common(list1, list2):
+    for i in list1: 
+        for j in list2: 
+            if i == j: 
+                return True
+    return False
+```
+
+2. Better option. we put one list in a dic with list1 values as key and values as true. Now you only have to look for this key in the dict using list2. O(n)
+
+```python
+def item_common(list1, list2):
+    mydict = {}
+    for i in list1: 
+        mydict[i] = True
+    for j in list2: 
+        if j in mydict: 
+            return True
+    return False
+```
