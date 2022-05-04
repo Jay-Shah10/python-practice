@@ -24,4 +24,15 @@ we are going to do Seperate Chainig = using linked lists at the memory address.
 * one of the best practice is to use prime numbers - increases the randomness of the memory. 
 * list of 0-7. 
 
+## Set method: 
+running the hash method on the key which will create the index in the list. 
 
+```python
+
+def set_item(self, key, value):
+    index = self.__hash(key): 
+    if self.data_map[index] == None:
+        self.data_map[index] = []
+    self.data_map[index].append([key, value])
+
+```
