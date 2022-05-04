@@ -7,9 +7,13 @@ class HashTable:
         for letter in key: 
             my_hash = (my_hash + ord(letter) * 23) % len(self.data_map) # returning the hash table address from 0-6
         return my_hash
+    def print_table(self):
+        for i, v in enumerate(self.data_map):
+            print(i, ": ", v)
 
 def main(): 
-    pass
+    table = HashTable()
+    table.print_table()
 
 
 if __name__ == "__main__":
