@@ -154,8 +154,6 @@ class LinkedList:
             before = temp
             temp = after
 
-
-
     def printList(self):
         """
         Have a pointer at the head. While the pointer is not None print all the values. 
@@ -164,10 +162,6 @@ class LinkedList:
         while temp is not None: 
             print(temp.data)
             temp = temp.next
-
-
-
-
 
 def main(): 
     n = LinkedList("mon")
@@ -188,8 +182,5 @@ def main():
     n.printList()
     print()
     
-
-    
-
 if __name__ == "__main__":
     main()
