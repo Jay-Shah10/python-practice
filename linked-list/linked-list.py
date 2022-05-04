@@ -138,6 +138,22 @@ class LinkedList:
         
         return temp
 
+    def reverse(self):
+        """
+        Reversing the linked list.
+        """
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+
+        after = temp.next
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
+
 
 
     def printList(self):
