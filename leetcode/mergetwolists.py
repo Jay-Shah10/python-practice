@@ -31,7 +31,7 @@ def mergeTwoLists(list1, list2) -> list:
 
 # -------------------------------
 
-# Solution two with itertion: 
+# Solution two, with itertion: 
 
 def mergeTwoLists(list1, list2) -> list: 
 
