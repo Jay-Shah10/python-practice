@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
 
 """
-Explination: 
+Explanation: 
 
 d = {}
     for i, v in enumerate(nums):
