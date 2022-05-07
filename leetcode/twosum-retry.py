@@ -71,5 +71,7 @@ d is emtpy.
 else: 
     Here we are filling up the dict. 
 
+here is an example of this from Neetcode: https://www.youtube.com/watch?v=KLlXCFG5TnA&t=12s
+
 
 """
