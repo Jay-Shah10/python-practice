@@ -66,8 +66,10 @@ the index as values in dict. This way it will keep track of value's index.
 Example: 2 + 7 = 9  || 9 - 2 = 7 . 
 
 Then we do a check for the match in d first.
-We do this first because we will have to fill up the dict rather than stopping at if we find a match. Plus at this moment
-d is emtpy. 
+We do this first because we will have to fill up the dict rather than stopping at if we find a match. 
+Plus at this moment d is emtpy. This will also prevent us from using same index - we can't use the same index. 
+Example if the target is 4. 4-2 is 2 and if the first value in nums is 2 then we would have the answer. 
+
 else: 
     Here we are filling up the dict. 
 
