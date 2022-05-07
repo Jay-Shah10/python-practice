@@ -45,11 +45,6 @@ def twoSum(nums: List[int], target: int) -> List[int]:
         if match in hash: 
             return [hash[match], index]
         hash[value] = index
-            
-
-        
-
-
 
 def main():
     nums = [3,3]
