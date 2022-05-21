@@ -5,13 +5,14 @@
 Vertex or node. 
 Edge or connection. 
 
+```
       3
 44 - - - - 76
            | 
            |  15 
            | 
            32
-
+```
 
 Edges can be weighted or not not. 
 depending on the weight of this - you can determine which path you want to take and how much we want to travel. 
@@ -23,13 +24,14 @@ Trees are a form of graphs. Linked List is a form of Tree. There for a linked li
 ### Adjacency Matrix: 
 * This would be having a matric that has a 1 for edge and 0 for no edges. 
 
+```
   x a b c d e
   a 0 1 0 0 1
   b 1 0 1 0 0 
   c 0 1 0 1 0
   d 0 0 1 0 1
   e 1 0 0 1 0
-
+```
 
 Y-axis above are the verties and the x-axis is the edge. 
 The edges are bi-directional and usually the edges have a symtry
@@ -37,6 +39,8 @@ The edges are bi-directional and usually the edges have a symtry
 
 ### Adjacency List: 
 * The graph will be represented with dictionary and list in it. 
+
+```python
 { 
     'A' : ['B', 'E'],
     'B' : ['A', 'C'], 
@@ -44,6 +48,7 @@ The edges are bi-directional and usually the edges have a symtry
     'D' : ['C', 'E'],
     'E' : ['A', 'D']
 }
+```
 
 Time Complexity: 
 * when adding a new: O(|V|^2) for the matrix and O(1) for the list. 
